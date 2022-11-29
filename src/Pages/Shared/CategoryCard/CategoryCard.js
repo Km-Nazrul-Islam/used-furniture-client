@@ -20,7 +20,7 @@ const CategoryCard = ({ product, setTargetProduct }) => {
                 <div className='border border-primary text-center rounded-lg my-2'>
                     <p>Seller Name: {seller_name}</p>
                     <p>Email: {email}</p>
-                    <p>PostedDate: {postDate}</p>
+                    <p>Posted Date: {postDate}</p>
                 </div>
                 
                 <div className="card-actions justify-center">

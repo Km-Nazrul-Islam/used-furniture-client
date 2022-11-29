@@ -22,7 +22,8 @@ const SignUp = () => {
                 toast('User Created Successfully');
 
                 const userInfo = {
-                    displayName: data.name,
+                    name: data.name,
+                    email: data.email,
                     role: data.role
                 }
 
@@ -75,8 +76,8 @@ const SignUp = () => {
                             {...register("role")}
                             className="space-y-1 text-sm mb-3 lg:w-full py-2 px-2 outline-none "
                         >
+                            <option value="buyer">Buyer</option>
                             <option value="seller">Seller</option>
-                            <option value="Buyer">Buyer</option>
                         </select>
                         {errors.email && <p>{errors.email.message}</p>}
                     </div>
