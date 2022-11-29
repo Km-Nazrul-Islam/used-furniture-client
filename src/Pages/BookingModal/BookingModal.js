@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import { AuthContext } from '../../context/AuthProvider';
 
 const BookingModal = ({ targetProduct, setTargetProduct }) => {
@@ -13,7 +14,7 @@ const BookingModal = ({ targetProduct, setTargetProduct }) => {
         const name = form.name.value;
         const email = form.email.value;
         const phone = form.phone.value;
-        // console.log(name, email, phone)
+        toast('Your Booking Is Done')
 
         const booking = {
             name,
