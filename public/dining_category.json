@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "diningroom_img": "https://i.ibb.co/q19gyXt/dining1.jpg",
+        "dining_name": "Segun Wood Dining",
+        "location": "Dhaka Mirpur",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 2,
+        "diningroom_img": "https://i.ibb.co/vZHH6FT/dining2.jpg",
+        "dining_name": "Leker Wood Dining",
+        "location": "Dhaka Khilket",
+        "resale_price": "18000 tk",
+        "original_price": "29000 tk",
+        "uses": "4 Years"
+    },
+    {
+        "id": 3,
+        "diningroom_img": "https://i.ibb.co/cN2gRzv/dining3.jpg",
+        "dining_name": "Barmatik Wood Dining",
+        "location": "Rajshahi Kajla",
+        "resale_price": "11000 tk",
+        "original_price": "18000 tk",
+        "uses": "2 Years"
+    },
+    {
+        "id": 4,
+        "diningroom_img": "https://i.ibb.co/G7P7DWs/dining4.jpg",
+        "dining_name": "Wooden Chair",
+        "location": "Barishal Polish Line",
+        "resale_price": "13000 tk",
+        "original_price": "19000 tk",
+        "uses": "2.5 Years"
+    },
+    {
+        "id": 5,
+        "diningroom_img": "https://i.ibb.co/ChnZZb8/dining5.jpg",
+        "dining_name": "Jassori Segun Wood Dining",
+        "location": "Dhaka Motijhil",
+        "resale_price": "17000 tk",
+        "original_price": "28000 tk",
+        "uses": "1 Years"
+    },
+    {
+        "id": 6,
+        "diningroom_img": "https://i.ibb.co/hFjg9m4/dining6.jpg",
+        "dining_name": "Godi Foam Set",
+        "location": "Chittagong Vatiyaree",
+        "resale_price": "11000 tk",
+        "original_price": "16000 tk",
+        "uses": "1 Years"
+    },
+    {
+        "id": 7,
+        "diningroom_img": "https://i.ibb.co/h8CKHVx/dining7.jpg",
+        "dining_name": "Two Seted Chair",
+        "location": "Khulna Dhamrai",
+        "resale_price": "9000 tk",
+        "original_price": "13000 tk",
+        "uses": "2 Years"
+    },
+    {
+        "id": 8,
+        "diningroom_img": "https://i.ibb.co/Z1qsByz/dining8.jpg",
+        "dining_name": "Foam dining Chair",
+        "location": "Dhaka Gabtoli",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "2 Years"
+    }
+]

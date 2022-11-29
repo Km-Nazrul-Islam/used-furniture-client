@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "drawing_img": "https://i.ibb.co/cy1HfpX/drawingroom1.jpg",
+        "drawing_name": "Laker Sofa",
+        "location": "Rajshahi Kazihata",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 2,
+        "drawing_img": "https://i.ibb.co/xKZf4J9/drawingroom2.jpg",
+        "drawing_name": "Laker Sofa",
+        "location": "Dhaka Panthopath",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 3,
+        "drawing_img": "https://i.ibb.co/Rp9Q6rn/drawingroom3.jpg",
+        "drawing_name": "Laker Foam Sofa",
+        "location": "Chittagong Badamtoli",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 4,
+        "drawing_img": "https://i.ibb.co/1qjMZSN/drawingroom4.jpg",
+        "drawing_name": "Board Sofa",
+        "location": "Syelet Kanduyana",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 5,
+        "drawing_img": "https://i.ibb.co/JxV7DKz/drawingroom5.jpg",
+        "drawing_name": "Single Chair",
+        "location": "Borguna Bihangi",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 6,
+        "drawing_img": "https://i.ibb.co/grGxZfz/drawingroom6.jpg",
+        "drawing_name": "Leader Sofa with Foam",
+        "location": "Kazihata Khulna",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 7,
+        "drawing_img": "https://i.ibb.co/DGTF4JM/drawingroom7.jpg",
+        "drawing_name": "Single Handle Chair",
+        "location": "Chittagong Crossing",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 8,
+        "drawing_img": "https://i.ibb.co/c3N2GjX/drawingroom8.jpg",
+        "drawing_name": "Cornar Sofa",
+        "location": "Dhaka Vuter Goli",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 9,
+        "drawing_img": "https://i.ibb.co/qjjwpj5/drawingroom9.jpg",
+        "drawing_name": "Wall Craft",
+        "location": "Rajshahi Durgapur",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    }
+]

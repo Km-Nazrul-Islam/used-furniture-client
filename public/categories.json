@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "name": "Bed Room Furniture",
+        "title": "See All Bed Room Furniture",
+        "img": "https://i.ibb.co/mvNF2pP/categories1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Dining Room Furniture",
+        "title": "See All Droing Room Furniture",
+        "img": "https://i.ibb.co/L9S80Km/categories2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Drawing Room Furniture",
+        "title": "See All Drawing Room Furniture",
+        "img": "https://i.ibb.co/qR7ptMN/categories3.jpg"
+    }
+    
+]

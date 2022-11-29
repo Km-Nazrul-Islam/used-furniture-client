@@ -1,0 +1,56 @@
+[
+    {
+        "id": 10,
+        "best_sell_name": "Best Sell Dining",
+        "best_sell_description": "Best Sell of this year. You don't need a long description detailing how much you loved the piece or how it was used. Just cover the basics, such as: the year you bought the furniture. the brand of the item, if it's well-known.",
+        "best_sell_img": "https://i.ibb.co/ck4Qm9n/sell1.jpg"
+    },
+    {
+        "id": 11,
+        "best_sell_name": "Best Sell Sofa",
+        "best_sell_description": "Best Sell of this year. You don't need a long description detailing how much you loved the piece or how it was used. Just cover the basics, such as: the year you bought the furniture. the brand of the item, if it's well-known.",
+        "best_sell_img": "https://i.ibb.co/fHKMYf1/sell2.jpg"
+    },
+    {
+        "id": 12,
+        "best_sell_name": "Best Sell Bed",
+        "best_sell_description": "Best Sell of this year. You don't need a long description detailing how much you loved the piece or how it was used. Just cover the basics, such as: the year you bought the furniture. the brand of the item, if it's well-known.",
+        "best_sell_img": "https://i.ibb.co/Zch8nm7/sell3.jpg"
+    },
+    {
+        "id": 13,
+        "best_sell_name": "Best Sell Bed Room",
+        "best_sell_description": "Best Sell of this year. You don't need a long description detailing how much you loved the piece or how it was used. Just cover the basics, such as: the year you bought the furniture. the brand of the item, if it's well-known.",
+        "best_sell_img": "https://i.ibb.co/S7kMpP2/sell4.jpg"
+    },
+    {
+        "id": 14,
+        "best_sell_name": "Best Sell Full Set",
+        "best_sell_description": "Best Sell of this year. You don't need a long description detailing how much you loved the piece or how it was used. Just cover the basics, such as: the year you bought the furniture. the brand of the item, if it's well-known.",
+        "best_sell_img": "https://i.ibb.co/nn0JPKf/sell5.jpg"
+    },
+    {
+        "id": 15,
+        "best_sell_name": "Best Sell Sofa",
+        "best_sell_description": "Best Sell of this year. You don't need a long description detailing how much you loved the piece or how it was used. Just cover the basics, such as: the year you bought the furniture. the brand of the item, if it's well-known.",
+        "best_sell_img": "https://i.ibb.co/cwzz5Kh/sell6.jpg"
+    },
+    {
+        "id": 16,
+        "best_sell_name": "Best Sell Tea Table",
+        "best_sell_description": "Best Sell of this year. You don't need a long description detailing how much you loved the piece or how it was used. Just cover the basics, such as: the year you bought the furniture. the brand of the item, if it's well-known.",
+        "best_sell_img": "https://i.ibb.co/s5dFtxz/sell7.jpg"
+    },
+    {
+        "id": 17,
+        "best_sell_name": "Best Sell Wardrobe",
+        "best_sell_description": "Best Sell of this year. You don't need a long description detailing how much you loved the piece or how it was used. Just cover the basics, such as: the year you bought the furniture. the brand of the item, if it's well-known.",
+        "best_sell_img": "https://i.ibb.co/HHRrfMv/sell8.jpg"
+    },
+    {
+        "id": 18,
+        "best_sell_name": "Best Sell Bed",
+        "best_sell_description": "Best Sell of this year. You don't need a long description detailing how much you loved the piece or how it was used. Just cover the basics, such as: the year you bought the furniture. the brand of the item, if it's well-known.",
+        "best_sell_img": "https://i.ibb.co/TRJqJK3/sell9.jpg"
+    }
+]

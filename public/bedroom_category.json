@@ -1,0 +1,84 @@
+[
+    {
+        "id": 1,
+        "bedroom_img": "https://i.ibb.co/3cyfZqD/bedroomfurniture1.jpg",
+        "bedroom_name": "Wooden Dressing Table",
+        "location": "Dhaka Mirpur",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 2,
+        "bedroom_img": "https://i.ibb.co/F0phn1D/bedroomfurniture2.jpg",
+        "bedroom_name": "Segun Dressing Table",
+        "location": "Dhaka Gabtoli",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 3,
+        "bedroom_img": "https://i.ibb.co/RBNvbYS/bedroomfurniture3.jpg",
+        "bedroom_name": "Laker Almirah",
+        "location": "Rajshahi Binodpur",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 4,
+        "bedroom_img": "https://i.ibb.co/x5BgLg7/bedroomfurniture4.jpg",
+        "bedroom_name": "Locker Droweer",
+        "location": "Chittagong Alankar",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 5,
+        "bedroom_img": "https://i.ibb.co/bRxNGfQ/bedroomfurniture5.jpg",
+        "bedroom_name": "Wal Cabinet",
+        "location": "Maymanshing Sadar",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 6,
+        "bedroom_img": "https://i.ibb.co/kg2WTCc/bedroomfurniture6.jpg",
+        "bedroom_name": "Laker Almirah",
+        "location": "Syelet Mayejvandari",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 7,
+        "bedroom_img": "https://i.ibb.co/SJGdrC9/bedroomfurniture7.jpg",
+        "bedroom_name": "Mahagony Almirah",
+        "location": "Bandarban Pahartoli",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 8,
+        "bedroom_img": "https://i.ibb.co/hBQxF5R/bedroomfurniture8.jpg",
+        "bedroom_name": "Segun Wooden Bed",
+        "location": "Cgittagong Bolirhat",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    },
+    {
+        "id": 9,
+        "bedroom_img": "https://i.ibb.co/dKtJDQ2/bedroomfurniture9.jpg",
+        "bedroom_name": "Wooden Bed",
+        "location": "Rajshahi Bagmara",
+        "resale_price": "14000 tk",
+        "original_price": "21000 tk",
+        "uses": "3 Years"
+    }
+    
+]
