@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CategoriesCard = ({category}) => {
-    const {_id, name, title, img } = category; 
+    const { category_id, name, title, img } = category; 
     console.log(category)
     return (
         <div className="card w-96 bg-base-200 shadow-xl">
@@ -11,7 +11,7 @@ const CategoriesCard = ({category}) => {
                 <h2 className="card-title justify-center">{name}</h2>
                 <p className='text-center'>{title}</p>
                 <div className="card-actions justify-center">
-                    <Link to={`/category/${_id}`}>
+                    <Link to={`/category/${category_id}`}>
                         <button className="btn btn-primary w-full text-white font-semibold">Tap To View Details</button>
                     </Link>
                 </div>

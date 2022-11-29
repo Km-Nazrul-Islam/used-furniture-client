@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { } from 'react-hook-form';
+import { AuthContext } from '../../context/AuthProvider';
 
 const BookingModal = ({ targetProduct, setTargetProduct }) => {
+    const {user} = useContext(AuthContext);
+    console.log(user)
     const { product_name, original_price, resale_price } = targetProduct;
 
     const handleBooking = event => {
@@ -27,19 +30,26 @@ const BookingModal = ({ targetProduct, setTargetProduct }) => {
             <input type="checkbox" id="booking-modal" className="modal-toggle" />
             <div className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
-                    <div className='flex sm-flex-col justify-between mb-4'>
-                        <p className="font-bold text-sm">{product_name}</p>
-                        <p className="font-bold text-sm">prePrice: {original_price}</p>
-                        <p className="font-bold text-sm"> sellPrice: {resale_price}</p>
-                    </div>
                     <form onSubmit={handleBooking}>
-                        <input name='name' type="text" placeholder="Your Name" className="input input-bordered w-full " />
+                        <input name='name' type="text" placeholder="Your Name" defaultValue={`Customer Name: ${user?.displayName}`} disabled className="input input-bordered w-full " />
                         <br />
                         <br />
-                        <input name='email' type="email" placeholder="Email Address" className="input input-bordered w-full " />
+                        <input name='email' type="text" placeholder="Your Email Address" defaultValue={`Customer Email: ${user?.email}`} disabled className="input input-bordered w-full " />
                         <br />
                         <br />
-                        <input name='phone' type="phone" placeholder="Phone Number" className="input input-bordered w-full " />
+                        <input name='product_name' type="text" placeholder="Your Selected Product" defaultValue={`Product Name: ${product_name}`} disabled className="input input-bordered w-full " />
+                        <br />
+                        <br />
+                        <input name='name' type="text" placeholder="Original Price" defaultValue={`Original Price : ${original_price}`} disabled className="input input-bordered w-full " />
+                        <br />
+                        <br />
+                        <input name='name' type="text" placeholder="Resell Price" defaultValue={`Resell Price : ${resale_price}`} disabled className="input input-bordered w-full " />
+                        <br />
+                        <br />
+                        <input name='phone' type="phone" placeholder="Contact Phone Number" className="input input-bordered w-full " />
+                        <br />
+                        <br />
+                        <input name='location' type="location" placeholder="Meeting Location" className="input input-bordered w-full " />
                         <br />
                         <br />
                         <br />

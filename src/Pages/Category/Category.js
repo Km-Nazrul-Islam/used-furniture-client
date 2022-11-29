@@ -6,7 +6,8 @@ import CategoryCard from '../Shared/CategoryCard/CategoryCard';
 
 const Category = () => {
     const [targetProduct, setTargetProduct] = useState(null);
-    const {category} = useLoaderData();
+    const category = useLoaderData();
+    console.log(category)
     return (
         <section>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-20'>
@@ -22,6 +23,7 @@ const Category = () => {
                 targetProduct &&
                 <BookingModal
                 targetProduct={targetProduct}
+                setTargetProduct={setTargetProduct}
                 ></BookingModal>
             }
         </section>
