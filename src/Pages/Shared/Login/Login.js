@@ -3,12 +3,13 @@ import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm()
-    const { userLogin, userGoogleLogin } = useContext(AuthContext);
+    const { userLogin, userGoogleLogin, userUpdate } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
     const location = useLocation();
     const navigate = useNavigate();
@@ -31,14 +32,39 @@ const Login = () => {
 
     }
 
-    const handleGoogleSignIn = () => {
+    const handleGoogleSignIn = (data) => {
+        console.log(data)
         const googleProvider = new GoogleAuthProvider()
-        userGoogleLogin(googleProvider)
+        userGoogleLogin(googleProvider, data.email, data.password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                toast('User Login Successfully');
+
+                const userInfo = {
+                    name: data.name,
+                    email: data.email,
+                    role: data.role
+                }
+                fetch('https://used-furniture-server-site.vercel.app/allUser',{
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(userInfo)
+                })
+                    .then(res => res.json())
+                    .then(data => console.log(data))
+                userUpdate(userInfo)
+                    .then(() => {
+                        navigate('/');
+                    })
+                    .catch(err => console.log(err))
             })
-            .catch(err => console.error(err))
+            .catch(err => {
+                console.error(err);
+                setLoginError(err.message);
+            })
     }
 
     

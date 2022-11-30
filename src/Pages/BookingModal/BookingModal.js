@@ -6,7 +6,7 @@ import { AuthContext } from '../../context/AuthProvider';
 const BookingModal = ({ targetProduct, setTargetProduct }) => {
     const {user} = useContext(AuthContext);
     console.log(user)
-    const { product_name, original_price, resale_price } = targetProduct;
+    const { product_name, original_price, resale_price, location } = targetProduct;
 
     const handleBooking = event => {
         event.preventDefault();
@@ -22,8 +22,15 @@ const BookingModal = ({ targetProduct, setTargetProduct }) => {
             phone,
             productName: product_name,
             resale_price,
+            location
         }
-        console.log(booking);
+        fetch('http://localhost:5000/bookings', {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(booking)
+        })
         setTargetProduct(null);
     }
     return (

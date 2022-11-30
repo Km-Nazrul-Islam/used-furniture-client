@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <div>
-            <footer className="footer p-10 bg-base-100 justify-between">
+        <div className=''>
+            <footer className="footer p-10 bg-gray-300 px-8 justify-between">
                 <div>
                     <span className="footer-title text-primary">Services</span>
                     <Link to="/" className="link link-hover">Branding</Link>

@@ -1,9 +1,9 @@
-import { useQuery } from '@tanstack/react-query';
+// import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { useEffect } from 'react';
 import { useContext } from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { AuthContext } from '../context/AuthProvider';
 import Footer from '../Pages/Shared/Footer/Footer';
 import Navbar from '../Pages/Shared/Navbar/Navbar';
@@ -12,16 +12,16 @@ const DashboardLayout = () => {
     const {user} = useContext(AuthContext)
     const [currentUser, setCurrentUser] = useState([]);
 
-    const url = `https://used-furniture-server-site.vercel.app/allUser?email=${user?.email}`
+    // const url = `https://used-furniture-server-site.vercel.app/allUser?email=${user?.email}`
 
-    const { data: allUser = [] } = useQuery({
-        queryKey: ['allUser', user?.email],
-        queryFn: async () => {
-            const res = await fetch(url);
-            const data = await res.json();
-            return data;
-        }
-    })
+    // const { data: allUser = [] } = useQuery({
+    //     queryKey: ['allUser', user?.email],
+    //     queryFn: async () => {
+    //         const res = await fetch(url);
+    //         const data = await res.json();
+    //         return data;
+    //     }
+    // })
 
     
 
@@ -34,39 +34,44 @@ const DashboardLayout = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className="drawer drawer-mobile my-20 bg-primary rounded-lg">
-                <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col mt-16 mx-4">
-                    
-                    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Product Menu</label>
 
+
+
+
+
+            <div className="drawer drawer-mobile">
+                <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+                <div className="drawer-content flex flex-col items-center bg-gray-300 rounded-xl m-4">
+                    <Outlet></Outlet>
                 </div>
-                <div className="drawer-side mr-2">
+                <div className="drawer-side">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 bg-gray-200 m-4 rounded-lg mt-16">
+                    <ul className="menu p-4 w-80 bg-gray-300 rounded-xl m-4">
+                        
                         {
-                            currentUser?.role==="admin"?
-                            <>
+                            currentUser?.role === "admin" ?
+                                <>
 
                                     <Link className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>All Seller</li></Link>
                                     <Link className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>All Buyer</li></Link>
                                     <Link className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>Reported Item</li></Link>
-                            </>
-                            :
-                            currentUser?.role === "seller" ? 
-                            <>
+                                </>
+                                :
+                                currentUser?.role === "seller" ?
+                                    <>
 
-                                        <Link className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>Add Product</li></Link>
+                                        <Link to="/dashboard/addproduct" className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>Add Product</li></Link>
                                         <Link className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>My Product</li></Link>
-                            </>
-                            :
+                                    </>
+                                    :
                                     <Link to="/dashboard/myorders" className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>My Order</li></Link>
                         }
-                        
+
                     </ul>
 
                 </div>
             </div>
+
             <Footer></Footer>
         </div>
     );
