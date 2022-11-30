@@ -7,7 +7,7 @@ const MyOrders = () => {
     const {user} = useContext(AuthContext)
     console.log(user)
 
-    const url = `http://localhost:5000/allUser?email=${user?.email}`
+    const url = `https://used-furniture-server-site.vercel.app/allUser?email=${user?.email}`
 
     const {data: allUser = []} = useQuery({
         queryKey: ['allUser', user?.email],

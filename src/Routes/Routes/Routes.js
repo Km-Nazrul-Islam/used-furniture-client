@@ -20,8 +20,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/category/:id',
-                element: <Category></Category>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+                element: <PrivetRoute><Category></Category></PrivetRoute>,
+                loader: ({ params }) => fetch(`https://used-furniture-server-site.vercel.app/category/${params.id}`)
             },
             {
                 path: '/login',

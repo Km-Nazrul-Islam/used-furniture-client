@@ -12,7 +12,7 @@ const DashboardLayout = () => {
     const {user} = useContext(AuthContext)
     const [currentUser, setCurrentUser] = useState([]);
 
-    const url = `http://localhost:5000/allUser?email=${user?.email}`
+    const url = `https://used-furniture-server-site.vercel.app/allUser?email=${user?.email}`
 
     const { data: allUser = [] } = useQuery({
         queryKey: ['allUser', user?.email],
@@ -26,7 +26,7 @@ const DashboardLayout = () => {
     
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/user/${user?.email}`)
+        fetch(`https://used-furniture-server-site.vercel.app/users/user/${user?.email}`)
         .then(res => res.json())
             .then(data => setCurrentUser(data))
     }, [user?.email])
