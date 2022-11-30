@@ -5,6 +5,7 @@ import { AuthContext } from '../../../context/AuthProvider';
 
 const MyOrders = () => {
     const {user} = useContext(AuthContext)
+    console.log(user)
 
     const url = `http://localhost:5000/allUser?email=${user?.email}`
 
@@ -16,20 +17,36 @@ const MyOrders = () => {
             return data;
         }
     })
+    console.log("use")
 
     return (
         
-        <div className="card w-96 bg-base-100 shadow-xl">
-            <figure className="px-10 pt-10">
-                <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
-            </figure>
-            <div className="card-body items-center text-center">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions">
-                    <button className="btn btn-primary">Buy Now</button>
-                </div>
-            </div>
+        <div className="overflow-x-auto">
+            <table className="table table-zebra w-full ">
+
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Admin Role</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {
+                        allUser.map((user, i) => <tr>
+                            <th>{i + 1}</th>
+                            <td>{user.name}</td>
+                            <td>{user.email}</td>
+                            <td>{user.role}</td>
+                            <td>Delete</td>
+                        </tr>)
+                    }
+
+                </tbody>
+            </table>
         </div>
     );
 };

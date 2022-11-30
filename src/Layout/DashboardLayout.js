@@ -10,6 +10,7 @@ import Navbar from '../Pages/Shared/Navbar/Navbar';
 
 const DashboardLayout = () => {
     const {user} = useContext(AuthContext)
+    const [currentUser, setCurrentUser] = useState([]);
 
     const url = `http://localhost:5000/allUser?email=${user?.email}`
 
@@ -22,7 +23,7 @@ const DashboardLayout = () => {
         }
     })
 
-    const [currentUser, setCurrentUser] = useState([]);
+    
 
     useEffect(() => {
         fetch(`http://localhost:5000/users/user/${user?.email}`)
@@ -36,33 +37,7 @@ const DashboardLayout = () => {
             <div className="drawer drawer-mobile my-20 bg-primary rounded-lg">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col mt-16 mx-4">
-                    <div className="overflow-x-auto">
-                        <table className="table table-zebra w-full ">
-                           
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Admin Role</th>
-                                    <th>Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                
-                                {
-                                    allUser.map((user, i) => <tr>
-                                        <th>{i+1}</th>
-                                        <td>{user.name}</td>
-                                        <td>{user.email}</td>
-                                        <td>{user.role}</td>
-                                        <td>Delete</td>
-                                    </tr>)
-                                }
-
-                            </tbody>
-                        </table>
-                    </div>
+                    
                     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Product Menu</label>
 
                 </div>
@@ -85,7 +60,7 @@ const DashboardLayout = () => {
                                         <Link className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>My Product</li></Link>
                             </>
                             :
-                                    <Link to="/myorders" className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>My Order</li></Link>
+                                    <Link to="/dashboard/myorders" className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>My Order</li></Link>
                         }
                         
                     </ul>
