@@ -29,7 +29,7 @@ const Footer = () => {
             <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
                 <div className="items-center grid-flow-col">
                     <img src="https://i.ibb.co/6RQTDDJ/imam.png" alt="" />
-                    <p className='lg:ml-72 text-center'>Imam Used Furniture Ltd. <br />We Provide Many Furniture Of Collection</p>
+                    <p className='lg:ml-72 text-center'>Imam Used Furniture Ltd. <br />We Provide Only Used Furniture Collection</p>
 
                 </div>
                 <div className="md:place-self-center md:justify-self-end">
