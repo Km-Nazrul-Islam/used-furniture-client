@@ -36,14 +36,17 @@ const DashboardLayout = () => {
                                 <>
 
                                     <Link to="/dashboard/allseller" className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>All Seller</li></Link>
-                                    <Link className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>All Buyer</li></Link>
-                                    <Link className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>Reported Item</li></Link>
+
+                                    <Link to="/dashboard/allbuyers" className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>All Buyer</li></Link>
+
+                                    <Link to="/dashboard/allreporteditem" className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>Reported Item</li></Link>
                                 </>
                                 :
                                 currentUser?.role === "seller" ?
                                     <>
 
                                         <Link to="/dashboard/addproduct" className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>Add Product</li></Link>
+
                                         <Link to="/dashboard/myproducts" className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>My Product</li></Link>
                                     </>
                                     :
