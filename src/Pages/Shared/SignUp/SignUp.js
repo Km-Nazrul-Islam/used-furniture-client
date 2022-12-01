@@ -37,8 +37,9 @@ const SignUp = () => {
                     .then(res => res.json())
                     .then(data => console.log(data))
 
-                userUpdate(userInfo)
-                    .then(() => {
+                userUpdate({displayName: data.name})
+                    .then((result) => {
+                        console.log(result)
                         navigate('/');
                     })
                     .catch(err => console.log(err))

@@ -35,7 +35,7 @@ const MyOrders = () => {
                     {
                         bookings.map((book, i) => <tr className='border border-primary'>
                             <th>{i + 1}</th>
-                            <th>{book.product_img}</th>
+                            <th><img src={book.product_img} alt="" /></th>
                             <td>{book.productName}</td>
                             <td>{book.resale_price}</td>
                             <td>{book.location}</td>
