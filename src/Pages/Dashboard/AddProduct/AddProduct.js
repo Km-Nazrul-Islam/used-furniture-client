@@ -1,4 +1,5 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 
 const AddProduct = () => {
     const handleAddProduct = (event) => {
@@ -12,6 +13,7 @@ const AddProduct = () => {
         const useOfYear = form.useOfYear.value;
         const productCondition = form.productCondition.value;
         const location = form.location.value;
+        const phone = form.phone.value;
         const dates = form.date.value;
 
         const addProduct = {
@@ -23,6 +25,7 @@ const AddProduct = () => {
             useOfYear,
             productCondition,
             location,
+            phone,
             dates,
         }
 
@@ -36,6 +39,8 @@ const AddProduct = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data)
+            toast('Successfully Added Your Product !!!')
+            form.reset()
         })
     }
     return (
@@ -64,6 +69,9 @@ const AddProduct = () => {
                 <br />
                 <br />
                 <input name='location' type="location" placeholder="Meeting Location" className="input input-bordered w-full " />
+                <br />
+                <br />
+                <input name='phone' type="phone" placeholder="Phone Number" className="input input-bordered w-full " />
                 <br />
                 <br />
                 <input name='date' type="date" className="input input-bordered w-full " />

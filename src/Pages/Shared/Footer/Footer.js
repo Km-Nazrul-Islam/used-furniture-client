@@ -4,28 +4,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div className=''>
-            <footer className="footer p-10 bg-gray-300 px-8 justify-between">
-                <div>
-                    <span className="footer-title text-primary">Services</span>
-                    <Link to="/" className="link link-hover">Branding</Link>
-                    <Link to="/" className="link link-hover">Design</Link>
-                    <Link to="/" className="link link-hover">Marketing</Link>
-                    <Link to="/" className="link link-hover">Advertisement</Link>
-                </div>
-                <div>
-                    <span className="footer-title text-primary">Company</span>
-                    <Link to="/" className="link link-hover">About us</Link>
-                    <Link to="/" className="link link-hover">Contact</Link>
-                    <Link to="/" className="link link-hover">Jobs</Link>
-                    <Link to="/" className="link link-hover">Press kit</Link>
-                </div>
-                <div>
-                    <span className="footer-title text-primary">Legal</span>
-                    <Link to="/" className="link link-hover">Terms of use</Link>
-                    <Link to="/" className="link link-hover">Privacy policy</Link>
-                    <Link to="/" className="link link-hover">Cookie policy</Link>
-                </div>
-            </footer>
+            
             <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
                 <div className="items-center grid-flow-col">
                     <img src="https://i.ibb.co/6RQTDDJ/imam.png" alt="" />
