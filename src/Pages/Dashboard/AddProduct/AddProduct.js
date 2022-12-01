@@ -5,7 +5,7 @@ const AddProduct = () => {
         event.preventDefault();
         const form = event.target;
         const category_id = form.category_id.value;
-        const productName = form.product.value;
+        const productName = form.productName.value;
         const quality = form.quality.value;
         const originalPrice = form.originalPrice.value;
         const resellPrice = form.resellPrice.value;
@@ -26,22 +26,26 @@ const AddProduct = () => {
             dates,
         }
 
-        fetch(`http://localhost:5000/category/${category_id}`,{
+        fetch('http://localhost:5000/category',{
             method: "POST",
             headers: {
                 "content-type": "application/json"
             },
             body: JSON.stringify(addProduct)
         })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
     }
     return (
-        <div>
+        <div className='w-full px-10 py-4'>
             <form onSubmit={handleAddProduct}>
 
                 <input name='category_id' type="number" placeholder="Your Product Category" className="input input-bordered w-full " />
                 <br />
                 <br />
-                <input name='product' type="text" placeholder="Your Product Name" className="input input-bordered w-full " />
+                <input name='productName' type="text" placeholder="Your Product Name" className="input input-bordered w-full " />
                 <br />
                 <br />
                 <input name='quality' type="text" placeholder="Your Product Quality" className="input input-bordered w-full " />

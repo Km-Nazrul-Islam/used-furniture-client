@@ -52,7 +52,7 @@ const DashboardLayout = () => {
                             currentUser?.role === "admin" ?
                                 <>
 
-                                    <Link className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>All Seller</li></Link>
+                                    <Link to="/dashboard/allseller" className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>All Seller</li></Link>
                                     <Link className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>All Buyer</li></Link>
                                     <Link className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>Reported Item</li></Link>
                                 </>
