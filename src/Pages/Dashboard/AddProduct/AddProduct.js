@@ -39,7 +39,7 @@ const AddProduct = () => {
         })
     }
     return (
-        <div className='w-full px-10 py-4'>
+        <div className='border-2 border-primary rounded-lg w-full p-8'>
             <form onSubmit={handleAddProduct}>
 
                 <input name='category_id' type="number" placeholder="Your Product Category" className="input input-bordered w-full " />

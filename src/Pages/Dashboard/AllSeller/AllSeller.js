@@ -20,8 +20,8 @@ const AllSeller = () => {
     console.log(users)
 
     return (
-        <div>
-            <h2>All Seller: {users.length}</h2>
+        <div className='border-2 border-primary rounded-lg w-full p-8'>
+            <h2 className='text-2xl text-center text-primary font-bold my-4'>All Seller Information</h2>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                    

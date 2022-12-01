@@ -12,19 +12,6 @@ const DashboardLayout = () => {
     const {user} = useContext(AuthContext)
     const [currentUser, setCurrentUser] = useState([]);
 
-    // const url = `https://used-furniture-server-site.vercel.app/allUser?email=${user?.email}`
-
-    // const { data: allUser = [] } = useQuery({
-    //     queryKey: ['allUser', user?.email],
-    //     queryFn: async () => {
-    //         const res = await fetch(url);
-    //         const data = await res.json();
-    //         return data;
-    //     }
-    // })
-
-    
-
     useEffect(() => {
         fetch(`https://used-furniture-server-site.vercel.app/users/user/${user?.email}`)
         .then(res => res.json())
@@ -35,18 +22,14 @@ const DashboardLayout = () => {
         <div>
             <Navbar></Navbar>
 
-
-
-
-
             <div className="drawer drawer-mobile">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col items-center bg-gray-300 rounded-xl m-4">
                     <Outlet></Outlet>
                 </div>
-                <div className="drawer-side">
+                <div className="drawer-side w-96">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 bg-gray-300 rounded-xl m-4">
+                    <ul className="menu px-4 w-80 bg-gray-300 rounded-xl m-4 border-2 border-primary">
                         
                         {
                             currentUser?.role === "admin" ?
@@ -61,10 +44,10 @@ const DashboardLayout = () => {
                                     <>
 
                                         <Link to="/dashboard/addproduct" className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>Add Product</li></Link>
-                                        <Link className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>My Product</li></Link>
+                                        <Link to="/dashboard/myproducts" className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>My Product</li></Link>
                                     </>
                                     :
-                                    <Link to="/dashboard/myorders" className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-500 rounded-2xl py-2 my-4'><li>My Order</li></Link>
+                                    <Link to="/dashboard/myorders" className='text-center text-2xl text-gray-700 font-bold bg-orange-300 hover:bg-orange-400 rounded-xl py-2 my-4'><li>My Order</li></Link>
                         }
 
                     </ul>
