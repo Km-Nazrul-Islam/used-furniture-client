@@ -29,7 +29,7 @@ const AddProduct = () => {
             postDate,
         }
 
-        fetch('http://localhost:5000/category',{
+        fetch('https://used-furniture-server-site.vercel.app/category',{
             method: "POST",
             headers: {
                 "content-type": "application/json"

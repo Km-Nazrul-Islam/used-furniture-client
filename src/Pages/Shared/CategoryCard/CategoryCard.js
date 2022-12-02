@@ -5,7 +5,7 @@ const CategoryCard = ({ product, setTargetProduct }) => {
     const { product_name, product_img, original_price, resale_price, location, uses, seller_name, email, postDate } = product;
 
     const handlerreport = (r) => {
-        fetch("http://localhost:5000/report", {
+        fetch("https://used-furniture-server-site.vercel.app/report", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

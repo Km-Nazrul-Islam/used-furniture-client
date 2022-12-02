@@ -11,7 +11,7 @@ const ReportedItem = () => {
     } = useQuery({
         queryKey: ["report"],
         queryFn: () =>
-            fetch("http://localhost:5000/report").then((res) =>
+            fetch("https://used-furniture-server-site.vercel.app/report").then((res) =>
                 res.json()
             ),
     });
@@ -21,7 +21,7 @@ const ReportedItem = () => {
     if (error) return "An error has occurred: " + error.message;
 
     const handlereportDelete = (id) => {
-        fetch(`http://localhost:5000/report/${id}`, {
+        fetch(`https://used-furniture-server-site.vercel.app/report/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())

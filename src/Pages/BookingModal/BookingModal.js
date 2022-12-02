@@ -26,7 +26,7 @@ const BookingModal = ({ targetProduct, setTargetProduct }) => {
             location,
             product_img
         }
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://used-furniture-server-site.vercel.app/bookings', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

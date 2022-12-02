@@ -13,14 +13,14 @@ const AllSeller = () => {
     } = useQuery({
         queryKey: ["users"],
         queryFn: () =>
-            fetch(`http://localhost:5000/allUser/${role.role}`).then(
+            fetch(`https://used-furniture-server-site.vercel.app/allUser/${role.role}`).then(
                 (res) => res.json()
             ),
     });
     console.log(users)
 
     const handleDelete = (_id) => {
-        fetch(`http://localhost:5000/allUser/${_id}`, {
+        fetch(`https://used-furniture-server-site.vercel.app/allUser/${_id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())

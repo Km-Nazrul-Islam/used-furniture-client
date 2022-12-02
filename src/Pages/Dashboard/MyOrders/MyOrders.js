@@ -6,7 +6,7 @@ const MyOrders = () => {
     const { isLoading, error, data: bookings } = useQuery({
         queryKey: ['bookings'],
         queryFn: () =>
-            fetch('http://localhost:5000/bookings').then(res =>
+            fetch('https://used-furniture-server-site.vercel.app/bookings').then(res =>
                 res.json()
             )
     })
