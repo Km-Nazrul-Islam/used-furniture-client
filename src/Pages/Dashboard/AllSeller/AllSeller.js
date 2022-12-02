@@ -13,11 +13,24 @@ const AllSeller = () => {
     } = useQuery({
         queryKey: ["users"],
         queryFn: () =>
-            fetch(`http://localhost:5000/users/${role.role}`).then(
+            fetch(`http://localhost:5000/allusers/${role.role}`).then(
                 (res) => res.json()
             ),
     });
     console.log(users)
+
+    const handleDelete = (_id) => {
+        fetch(`http://localhost:5000/allUser/${_id}`, {
+            method: "DELETE",
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                if (data.deletedCount > 0) {
+                    alert("delete successfully");
+                }
+            });
+    };
 
     return (
         <div className='border-2 border-primary rounded-lg w-full p-8'>
@@ -30,7 +43,7 @@ const AllSeller = () => {
                             <th></th>
                             <th>Email</th>
                             <th>Name</th>
-                            <th>Job</th>
+                            <th>Delete Seller</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,7 +54,14 @@ const AllSeller = () => {
                                 <th>{i + 1}</th>
                                 <td>{user.email}</td>
                                 <td>{user.name}</td>
-                                <td>Delete</td>
+                                <td>
+                                    <button
+                                        onClick={() => handleDelete(user._id)}
+                                        className="btn btn-sm"
+                                    >
+                                        Delete
+                                    </button>
+                                </td>
 
                             </tr>)
                         }

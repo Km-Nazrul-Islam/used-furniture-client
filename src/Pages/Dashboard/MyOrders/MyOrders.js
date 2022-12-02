@@ -10,13 +10,12 @@ const MyOrders = () => {
                 res.json()
             )
     })
-    console.log(bookings)
 
     if (isLoading) return 'Loading...'
 
     if (error) return 'An error has occurred: ' + error.message
     return (
-        <div className="w-full p-8 border-2 border-primary rounded-lg">
+        <div className="w-1/2 lg:w-full p-8 border-2 border-primary rounded-lg">
             <h2 className='text-2xl text-center text-primary font-bold my-4'>My Products Information</h2>
             <table className="table table-zebra w-full border border-primary">
 
@@ -39,7 +38,7 @@ const MyOrders = () => {
                             <td>{book.productName}</td>
                             <td>{book.resale_price}</td>
                             <td>{book.location}</td>
-                            <Link to="/"><td className='btn btn-primary m-2'>Buy Now</td></Link>
+                            <Link to="/"><td className='btn btn-primary mt-8 mx-4'>Pay</td></Link>
                         </tr>)
                     }
 

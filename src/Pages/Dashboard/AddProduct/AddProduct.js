@@ -6,27 +6,27 @@ const AddProduct = () => {
         event.preventDefault();
         const form = event.target;
         const category_id = form.category_id.value;
-        const productName = form.productName.value;
-        const quality = form.quality.value;
-        const originalPrice = form.originalPrice.value;
-        const resellPrice = form.resellPrice.value;
-        const useOfYear = form.useOfYear.value;
+        const product_name = form.productName.value;
+        const product_img = form.quality.value;
+        const original_price = form.originalPrice.value;
+        const resale_price = form.resellPrice.value;
+        const uses = form.useOfYear.value;
         const productCondition = form.productCondition.value;
         const location = form.location.value;
         const phone = form.phone.value;
-        const dates = form.date.value;
+        const postDate = form.date.value;
 
         const addProduct = {
             category_id,
-            productName,
-            quality,
-            originalPrice,
-            resellPrice,
-            useOfYear,
+            product_name,
+            product_img,
+            original_price,
+            resale_price,
+            uses,
             productCondition,
             location,
             phone,
-            dates,
+            postDate,
         }
 
         fetch('http://localhost:5000/category',{

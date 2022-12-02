@@ -1,7 +1,24 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 
 const CategoryCard = ({ product, setTargetProduct }) => {
     const { product_name, product_img, original_price, resale_price, location, uses, seller_name, email, postDate } = product;
+
+    const handlerreport = (r) => {
+        fetch("http://localhost:5000/report", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(r),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                toast.success("Report this product");
+            });
+    };
+
     return (
         <div className="card w-96 bg-base-200 shadow-xl">
             <img src={product_img} alt="" />
@@ -29,6 +46,12 @@ const CategoryCard = ({ product, setTargetProduct }) => {
                     className="btn btn-primary w-full text-white font-semibold"
                         onClick={() => setTargetProduct (product)}
                     >Book Now</label>
+                    <label
+                        onClick={() => handlerreport(product)}
+                        className="btn btn-sm btn-outline btn-primary w-full"
+                    >
+                        Report
+                    </label>
                 </div>
             </div>
         </div>

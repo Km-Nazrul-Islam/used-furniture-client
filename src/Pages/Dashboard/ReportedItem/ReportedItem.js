@@ -1,51 +1,47 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import Report from './Report';
 
 const ReportedItem = () => {
-    const role = {
-        role: "seller",
-    };
+   
     const {
         isLoading,
         error,
-        data: users = [],
+        data: reports = [],
     } = useQuery({
-        queryKey: ["users"],
+        queryKey: ["report"],
         queryFn: () =>
-            fetch(`http://localhost:5000/users/${role.role}`).then(
-                (res) => res.json()
+            fetch("http://localhost:5000/report").then((res) =>
+                res.json()
             ),
     });
-    console.log(users)
+    
+    if (isLoading) return; 
+    <p>Loading...</p>
+    if (error) return "An error has occurred: " + error.message;
+
+    const handlereportDelete = (id) => {
+        fetch(`http://localhost:5000/report/${id}`, {
+            method: "DELETE",
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                if (data.deletedCount > 0) {
+                    alert("delete successfully");
+                }
+            });
+    };
 
     return (
-        <div className='border-2 border-primary rounded-lg w-full p-8'>
-            <h2 className='text-2xl text-center text-primary font-bold my-4'>All Reported Items</h2>
-            <div className="overflow-x-auto">
-                <table className="table w-full">
-
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Email</th>
-                            <th>Name</th>
-                            <th>Job</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            users.map((user, i) => <tr>
-
-                                <th>{i + 1}</th>
-                                <td>{user.email}</td>
-                                <td>{user.name}</td>
-                                <td>Delete</td>
-
-                            </tr>)
-                        }
-                    </tbody>
-                </table>
-            </div>
+        <div className="">
+            {reports?.map((report) => (
+                <Report
+                    key={report._id}
+                    report={report}
+                    handlereportDelete={handlereportDelete}
+                ></Report>
+            ))}
         </div>
     );
 };

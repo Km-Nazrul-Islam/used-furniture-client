@@ -12,8 +12,7 @@ const MyProducts = () => {
                         <th>Name</th>
                         <th>Price</th>
                         <th>Condition</th>
-                        <th>Available </th>
-                        <th>Sold </th>
+                        <th>Sales Status</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
@@ -25,8 +24,7 @@ const MyProducts = () => {
                             <th>Wooden Bed</th>
                             <td>19000 tk</td>
                             <td>2 Years Used</td>
-                            <td>Yes</td>
-                            <td>No</td>
+                            <td>Available</td>
                             <td>Delete</td>
                         </tr>
                     

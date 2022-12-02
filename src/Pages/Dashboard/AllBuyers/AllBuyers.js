@@ -1,10 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AllBuyers = () => {
 
     const role = {
-        role: "seller",
+        role: "buyer",
     };
     const {
         isLoading,
@@ -18,6 +19,18 @@ const AllBuyers = () => {
             ),
     });
     console.log(users)
+    const handleDelete = (_id) => {
+        fetch(`http://localhost:5000/allUser/${_id}`, {
+            method: "DELETE",
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                if (data.deletedCount > 0) {
+                    alert("delete successfully");
+                }
+            });
+    };
 
     return (
         <div className='border-2 border-primary rounded-lg w-full p-8'>
@@ -28,9 +41,9 @@ const AllBuyers = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Email</th>
                             <th>Name</th>
-                            <th>Job</th>
+                            <th>Email</th>
+                            <th>Delete Buyers</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,9 +51,18 @@ const AllBuyers = () => {
                             users.map((user, i) => <tr>
 
                                 <th>{i+1}</th>
-                                <td>{user.email}</td>
                                 <td>{user.name}</td>
-                                <td>Delete</td>
+                                <td>{user.email}</td>
+                            <td className='btn btn-primary mx-4'> 
+                            
+                                    <button
+                                        onClick={() => handleDelete(user._id)}
+                                        className="btn btn-sm"
+                                    >
+                                        Delete
+                                    </button>
+                            
+                            </td>
 
                             </tr>)
                     }
