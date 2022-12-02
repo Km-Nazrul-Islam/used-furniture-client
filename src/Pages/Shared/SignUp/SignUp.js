@@ -27,7 +27,7 @@ const SignUp = () => {
                     role: data.role
                 }
 
-                fetch('https://used-furniture-server-site.vercel.app/allUser', {
+                fetch('http://localhost:5000/allUser', {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

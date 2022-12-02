@@ -13,7 +13,7 @@ const AllSeller = () => {
     } = useQuery({
         queryKey: ["users"],
         queryFn: () =>
-            fetch(`http://localhost:5000/allusers/${role.role}`).then(
+            fetch(`http://localhost:5000/allUser/${role.role}`).then(
                 (res) => res.json()
             ),
     });
