@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider';
+import loginImage from '../../../assets/images/login/login.png';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm()
@@ -70,27 +71,30 @@ const Login = () => {
     
     
     return (
-        <div className='flex justify-center items-center'>
-            <div className='w-96 p-8'>
-                <h2 className='text-xl font-bold'>Login</h2>
+        <div className='flex justify-center items-center my-8 rounded-xl'>
+            <div className='w-1/2'>
+                <img src={loginImage} alt="" />
+            </div>
+            <div className='w-1/2 p-8'>
+                <h2 className='text-xl text-center font-bold'>Please Login </h2>
                 <form onSubmit={handleSubmit(handleLogin)}>
 
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full">
                         <label className="label"><span className="label-text">Email</span></label>
                         <input type="text"
                             {...register("email", { required: "Email Address is required" })}
-                            className="input input-bordered w-full max-w-xs" />
+                            className="input input-bordered w-full" />
                         {errors.email && <p className='text-red-500'>{errors.email?.message}</p>}
                     </div>
 
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full">
                         <label className="label"><span className="label-text">Password</span></label>
                         <input type="password"
                             {...register("password", {
                                 required: 'Password is Required',
                                 minLength: { value: 6, message: 'Password must be 6 character or longer' }
                             })}
-                            className="input input-bordered w-full max-w-xs" />
+                            className="input input-bordered w-full" />
                         {errors.password && <p className='text-red-500'>{errors.password?.message}</p>}
                         <label className="label"><span className="label-text">Forget Password ?</span></label>
                     </div>
@@ -100,7 +104,7 @@ const Login = () => {
                         {loginError && <p className='text-red-500 mt-4'>{loginError}</p>}
                     </div>
                 </form>
-                <p className='mt-4'>Book Your Product ? <Link className='text-primary text-xl' to="/signup">Creat New Account</Link></p>
+                <p className='mt-4'>Book Your Product ? <Link className='text-black text-xl' to="/signup">Creat New Account</Link></p>
                 <div className="divider">OR</div>
                 <button className='btn btn-outline uppercase w-full' onClick={handleGoogleSignIn}>Continue With Google</button>
             </div>

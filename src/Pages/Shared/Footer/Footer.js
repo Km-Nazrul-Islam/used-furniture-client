@@ -1,9 +1,67 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Chevron from 'react-chevron';
 
 const Footer = () => {
     return (
-        <div className=''>
+        <section>
+            <footer>
+                <div className='p-10 bg-gray-800 text-gray-200'>
+                    <div className='max-w-7xl mx-auto'>
+                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2'>
+                            <div className='mb-5'>
+                                <h4 className='text-2xl pb-4'>Company</h4>
+                                <p className='text-gray-500'>
+                                    Rajshahi, Bangladesh <br />
+                                    Bagmara Road 99876 <br />
+                                    Rajshahi. <br /><br />
+                                    <strong>Phone</strong> +88 017 72 82 49 60 <br />
+                                    <strong>Email:</strong> imamonlinemart24@gmail.com
+                                </p>
+                            </div>
+                            <div className='mb-5'>
+                                <h4 className='pb-4'>Usefull Link:</h4>
+                                <ul className='text-gray-500'>
+                                    <li className='pb-4'><i className='fa fa-chevron-right'></i> <a href="#" className='hover:text-yellow-500'>Home</a></li>
+                                    <li className='pb-4'><i className='fa fa-chevron-right'></i> <a href="#" className='hover:text-yellow-500'>About</a></li>
+                                    <li className='pb-4'><i className='fa fa-chevron-right'></i> <a href="#" className='hover:text-yellow-500'>Services</a></li>
+                                    <li className='pb-4'><i className='fa fa-chevron-right'></i> <a href="#" className='hover:text-yellow-500'>terms of services</a></li>
+                                    <li className='pb-4'><i className='fa fa-chevron-right'><a href="#" className='hover:text-yellow-500'>Privacy policy</a></i></li>
+                                </ul>
+                            </div>
+                            <div className='mb-5'>
+                                <h4 className='pb-4'>Our Services</h4>
+                                <ul className='text-gray-500'>
+                                    <li className='pb-4'><i className='fa fa-chevron-right'></i><a href="#" className='hover:text-yellow-500'>Home Decoretion</a></li>
+                                    <li className='pb-4'><i className='fa fa-chevron-right'></i><a href="#" className='hover:text-yellow-500'>Office Decoration</a></li>
+                                    <li className='pb-4'><i className='fa fa-chevron-right'></i><a href="#" className='hover:text-yellow-500'>Resturent Intirior</a></li>
+                                    <li className='pb-4'><i className='fa fa-chevron-right'></i><a href="#" className='hover:text-yellow-500'>Used Furniture Sell</a></li>
+                                    <li className='pb-4'><i className='fa fa-chevron-right'></i><a href="#" className='hover:text-yellow-500'>Adviertice Marketing</a></li>
+                                </ul>
+                            </div>
+                            <div className='mb-5'>
+                                <h4 className='pb-4'>Join Our Team</h4>
+                                <p className='text-gray-500'>Join our market place and find out new</p>
+                                <form className='flex flex-row flex-wrap'>
+                                    <input type="text" name="" id="" />
+                                    <button>Subscribe</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    );
+};
+
+export default Footer;
+
+
+
+/*
+
+<div className=''>
             
             <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
                 <div className="items-center grid-flow-col">
@@ -20,7 +78,5 @@ const Footer = () => {
                 </div>
             </footer>
         </div>
-    );
-};
 
-export default Footer;
+*/
