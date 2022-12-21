@@ -41,12 +41,23 @@ const Footer = () => {
                             </div>
                             <div className='mb-5'>
                                 <h4 className='pb-4'>Join Our Team</h4>
-                                <p className='text-gray-500'>Join our market place and find out new</p>
+                                <p className='text-gray-500'>Join our market place and find out new <br />
+                                to Imam Furniture Mart</p>
                                 <form className='flex flex-row flex-wrap'>
-                                    <input type="text" name="" id="" />
-                                    <button>Subscribe</button>
+                                    <input type="text" className='text-gray-500 w-2/3 p-2 focus:border-yellow-500' placeholder='type@email.com'/>
+                                    <button className='p-2 w-1/3 bg-yellow-500 text-white hover:bg-yellow-600'>Subscribe</button>
                                 </form>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='bg-gray-900 text-gray-500 px-10'>
+                    <div>
+                        <div className='text-center'>
+                            <div>
+                                Copyright <strong><span>company</span></strong>. All Rigth Resereved
+                            </div>
+                            <div><a href="#" className='text-yellow-500'>Powerd By Imam Furniture Mart</a></div>
                         </div>
                     </div>
                 </div>
